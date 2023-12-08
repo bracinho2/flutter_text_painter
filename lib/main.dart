@@ -110,6 +110,7 @@ class _CommentWidgetState extends State<CommentWidget> {
       text: span,
     )..layout(maxWidth: maxWidth);
 
+    //Método para sabermos se o Texto é maior que o MaxLines;
     final exceeded = textPainter.didExceedMaxLines;
 
     return Column(
