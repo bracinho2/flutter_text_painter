@@ -122,12 +122,20 @@ class _CommentWidgetState extends State<CommentWidget> {
           ),
         ),
         isExpanded
-            ? Text(_text)
-            : Text(
-                _text,
-                maxLines: maxLines,
-                textAlign: TextAlign.justify,
-                overflow: TextOverflow.ellipsis,
+            ? SizedBox(
+                width: maxWidth,
+                child: Text(
+                  _text,
+                ),
+              )
+            : SizedBox(
+                width: maxWidth,
+                child: Text(
+                  _text,
+                  maxLines: maxLines,
+                  textAlign: TextAlign.justify,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
         if (exceeded)
           InkWell(
